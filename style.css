@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    cursor: none;
+}
+
+.instructions {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    z-index: 10;
+    pointer-events: none;
+    text-shadow: 0 0 5px white;
+}
+
+.instructions h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.instructions p {
+    font-size: 1.2rem;
+}
+
+.animal {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.1s ease;
+    pointer-events: none;
+    z-index: 5;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Animal types with emoji */
+.animal.cat::after {
+    content: "🐱";
+    font-size: 24px;
+}
+
+.animal.dog::after {
+    content: "🐶";
+    font-size: 24px;
+}
+
+.animal.rabbit::after {
+    content: "🐰";
+    font-size: 24px;
+}
+
+.animal.fox::after {
+    content: "🦊";
+    font-size: 24px;
+}
+
+.animal.bird::after {
+    content: "🐦";
+    font-size: 24px;
+}
+
+/* Different colors for animals */
+.animal.color1 {
+    background-color: rgba(255, 82, 82, 0.3);
+}
+
+.animal.color2 {
+    background-color: rgba(76, 175, 80, 0.3);
+}
+
+.animal.color3 {
+    background-color: rgba(33, 150, 243, 0.3);
+}
+
+.animal.color4 {
+    background-color: rgba(255, 193, 7, 0.3);
+}
+
+.animal.color5 {
+    background-color: rgba(156, 39, 176, 0.3);
+}
+
+.animal.color6 {
+    background-color: rgba(255, 152, 0, 0.3);
+}
+
+.animal.color7 {
+    background-color: rgba(0, 188, 212, 0.3);
+}
+
+.animal.color8 {
+    background-color: rgba(121, 85, 72, 0.3);
+}
+
+/* Animation for animals */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.1); }
+}
+
+.animal:hover {
+    animation: bounce 0.5s infinite;
+}
